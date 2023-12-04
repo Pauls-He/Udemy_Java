@@ -5,7 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int counter = 0;
-        int sum = 0;
+        double sum = 0;
 
         //while(true) {
         while(counter < 10) {
