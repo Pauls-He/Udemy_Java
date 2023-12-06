@@ -7,4 +7,7 @@ class Dog {
     public void printName(){
         System.out.println("name = " + name);
     }
+    public void bark(){
+        System.out.println("woof");
+    }
 }
