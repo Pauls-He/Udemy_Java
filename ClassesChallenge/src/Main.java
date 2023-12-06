@@ -5,9 +5,10 @@ public class Main {
 
 
 
-        Account bobsAccount = new Account("12345", 500.00,
-                "Bob Brown", "myemail@bob.com",
-                "(087) 123-4567");
+//        Account bobsAccount = new Account("12345", 500.00,
+//                "Bob Brown", "myemail@bob.com",
+//                "(087) 123-4567");
+        Account bobsAccount = new Account();
         System.out.println(bobsAccount.getNumber());
         System.out.println(bobsAccount.getBalance());
 
@@ -27,5 +28,10 @@ public class Main {
         bobsAccount.withdrawFounds(54.46);
 
         bobsAccount.withdrawFounds(54.45);
+
+
+        Account timsAccount = new Account("Tim", "tim@email.com", "12345");
+        System.out.println("AccountNo: " + timsAccount.getNumber() +
+                "; name " + timsAccount.getCustomerName());
     }
 }
