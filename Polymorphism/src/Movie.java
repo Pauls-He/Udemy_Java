@@ -10,6 +10,15 @@ public class Movie {
         System.out.println(title + " is a " + instanceType + " film");
 
     }
+
+    public static Movie getMovie(String type, String title){
+        return switch (type.toUpperCase().charAt(0)){
+            case 'A' -> new Adventure(title);
+            case 'C' -> new Comedy(title);
+            case 'S' -> new ScienceFiction(title);
+            default -> new Movie(title);
+        };
+    }
 }
 class Adventure extends Movie{
     public Adventure(String title) {
@@ -23,6 +32,10 @@ class Adventure extends Movie{
                 "Pleasant Scene",
                 "Scary Music",
                 "Something Bad Happens");
+    }
+
+    public void watchAdventure(){
+        System.out.println("Watching an Adventure!");
     }
 }
 class Comedy extends Movie{
@@ -38,6 +51,9 @@ class Comedy extends Movie{
                 "Something even funnier happens",
                 "Happy Ending");
     }
+    public void watchComedy(){
+        System.out.println("Watching a Comedy!");
+    }
 }
 class ScienceFiction extends Movie{
     public ScienceFiction(String title) {
@@ -48,9 +64,12 @@ class ScienceFiction extends Movie{
     public void watchMovie() {
         super.watchMovie();
         System.out.printf(".. %s%n".repeat(3),
-                "Bad Aliens do Bad Sruff",
-                "Space Guys Chase Alliens",
+                "Bad Aliens do Bad Stuff",
+                "Space Guys Chase Aliens",
                 "Planet Blows Up");
+    }
+    public void watchScienceFiction(){
+        System.out.println("Watching a Science Fiction!");
     }
 }
 
